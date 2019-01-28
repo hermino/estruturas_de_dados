@@ -1,0 +1,24 @@
+---
+matrix:
+    include:
+        - language: python
+          python:
+            - "3.6"
+          install:
+            - make install_python
+          script:
+            - make build_python
+
+        - language: c
+          compiler:
+            - gcc
+          script:
+            - make build_c
+
+       -  language: java
+          jdk:
+            - oraclejdk8
+          install: true
+          script:
+            - make build_java
+...
